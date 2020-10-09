@@ -2,7 +2,7 @@
 Sennin Mode
 
 ## Deskripsi Soal
-Apakah kamu harus mempunyai kekuatan sennin mode untuk menyelesaikan soal ini ?
+Apakah kamu harus mempunyai kekuatan sennin mode untuk menyelesaikan soal ini ?<br>
 Author : 0x124f13
 
 ## Penjelasan Singkat Soal
@@ -11,6 +11,7 @@ Soal ini awalnya melakukan generate seed untuk random dari value flag. Disini, s
 Cara kerjanya dalam hal ini peserta dapat memprediksi panjang dari flag yaitu 66, sehingga dapat menyelesaikan tahap untuk generasi seed. Setelah seed didapatkan, peserta tinggal melakukan solve pada persamaan linear yang didapatkan dari nilai x dan y dengan menggunakan tools SageMath.
 
 ## Catatan Deploy Soal
+- Folder deploy soal di server terdapat pada folder `server`
 - Soal dibuat dengan Python 3
 - Ubah port yang diinginkan untuk service soal pada file `docker-compose.yml`
 - run `docker-compose build`
@@ -18,4 +19,4 @@ Cara kerjanya dalam hal ini peserta dapat memprediksi panjang dari flag yaitu 66
 
 ## Catatan Solver
 Note : Sebelumnya, harus menginstall `sage` versi terbaru.
-Solver soal terdapat pada script python3 bernama `solver.py` . Tinggal mengganti HOST dan PORT nya.
+Solver soal terdapat pada script python3 bernama `solver.py` dalam folder `solver` . Tinggal mengganti HOST dan PORT nya.
