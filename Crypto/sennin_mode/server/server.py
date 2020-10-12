@@ -76,7 +76,7 @@ for i in range(10):
 		start = time.time()
 		input_dec = int(input_dec)
 		end = time.time()
-		if end - start > 5:
+		if end - start > 7:
 			print("Times Up")
 			break
 		if input_dec == dec_plain:
