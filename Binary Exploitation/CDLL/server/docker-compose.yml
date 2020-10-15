@@ -1,0 +1,9 @@
+
+version: '3'
+services:
+    cdll:
+        build: .
+        container_name: cdll
+        restart: always
+        ports:
+            - "5000:5000"
