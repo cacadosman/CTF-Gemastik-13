@@ -4,7 +4,7 @@ services:
   web_2:
     build: .
     ports:
-      - "10102:4444"
+      - "10002:4444"
     dns: "0.0.0.0"
     restart: on-failure
 
