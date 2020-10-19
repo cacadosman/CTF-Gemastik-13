@@ -4,11 +4,14 @@ Documentations
 ## Deskripsi Soal
 > Nothing special. Just a plain documentation page. For security reason, I decided to block the internet access <br>Author: コト
 
+## Hint Soal
+- The flag is located at `current directory`
+
 ---
 
 ## Penjelasan Singkat Soal
 Soal ini berisikan sebuah web service berupa laman `dokumentasi python` yang dijalankan menggunakan Flask sebagai `base` servernya. <br><br>
-Sebagaimana web dokumentasi pada umumnya, webservice hanya akan memberikan isi dari `__doc__` sehingga peserta perlu menggunakan pendekatan `Blind SSTI`. Selain itu, terdapat pula list `blacklisted character` pada endpoint `/debug`.<br>
+Sebagaimana tertera pada `source code` yang diberikan, webservice hanya akan memberikan isi dari `__doc__` sehingga peserta perlu menggunakan pendekatan `Blind SSTI`.<br>
 
 Karena beberapa limitasi karakter, kita perlu melakukan pendekatan lain yang salah satunya memanfaatkan `Exception` dari `IndexError` untuk mengetahui karakter manakah yang terdapat pada substring.<br>
 
@@ -30,7 +33,7 @@ Solver soal terdapat pada script python2 bernama `sv.py` pada folder `solver` . 
 Berikut merupakan cuplikan dari hasil pengeksekusian script pada `localhost`:
 
 ```bash
-$ time python2 sv2.py
+$ time python2 sv.py
 
 main.py requirements.txt run.sh static templates zzzz_fl4g_uwu 
 

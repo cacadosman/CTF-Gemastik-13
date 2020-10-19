@@ -8,18 +8,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/debug')
-def debug():
-    return '''<code> blacklisted = [
-        'config', 'request', 'url_for',
-        'import', 'attr', 'join', 'builtins',
-        'map', 'func_globals', 'subclasses',
-        'class', 'base', 'mro', 'init',
-        'globals', 'chr', ' ', '\\', 'hex'
-        '+', '.', 'IFS', '{', '}', 'decode'
-    ]</code>
-    '''.replace('\n', '<br>')
-
 @app.route('/docs')
 @app.route('/docs/<name>')
 def docs(name=None):
@@ -42,13 +30,19 @@ def docs(name=None):
         'decode',
         'hex',
         'chr',
+        'popen',
+        'system',
+        'read',
+        'self',
+        'args',
         ' ',
         '\\',
         '+',
         '.',
         'IFS',
         '{',
-        '}'
+        '}',
+        '|',
     ]
 
     if name:
@@ -64,4 +58,4 @@ def docs(name=None):
         return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=4444)
+    app.run(host='0.0.0.0', port=4444, debug=False)
