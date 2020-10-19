@@ -35,9 +35,8 @@ Berikut merupakan cuplikan dari hasil pengeksekusian script pada `localhost`:
 ```bash
 $ time python2 sv.py
 
-main.py requirements.txt run.sh static templates zzzz_fl4g_uwu 
-
-gemastik13.i_th0ught_it_w4s_s3cure_en0ugh_f3bd301.
+main.py requirements.txt secret_flag static templates 
+gemastik13.i_th0ught_it_w45_s3cure. 
 
 python2 sv2.py  4.09s user 0.45s system 9% cpu 46.670 total
 

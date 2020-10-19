@@ -43,6 +43,9 @@ def docs(name=None):
         '{',
         '}',
         '|',
+        '%',
+        ',',
+        '-'
     ]
 
     if name:

