@@ -6,7 +6,7 @@ import requests
 import re
 
 def send(command):
-    url = 'http://0.0.0.0:30001/docs/'
+    url = 'http://0.0.0.0:10102/docs/'
     resp = requests.get(url + command)
 
     if resp.status_code == 200:

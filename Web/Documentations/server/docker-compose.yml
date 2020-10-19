@@ -1,10 +1,10 @@
 version: "3"
 
 services:
-  web:
+  web_2:
     build: .
     ports:
-      - "10002:4444"
+      - "10102:4444"
     dns: "0.0.0.0"
     restart: on-failure
 
