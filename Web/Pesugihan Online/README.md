@@ -2,7 +2,10 @@
 Pesugihan Online
 
 ## Deskripsi Soal
-> Tolong saya ditipu oleh website abal-abal yang katanya ahli pesugihan yang ternyata dia petapa palsu, tolong webnya dihack aja :'( <br>Author: cacadosman
+Tolong saya ditipu oleh website abal-abal yang katanya ahli pesugihan yang ternyata dia petapa palsu, tolong webnya dihack aja biar tidak ada korban lagi :'( <br>
+https://drive.google.com/file/d/1tIbSDssJC3rT-axtoAbK0PRF_T0uG4Uy/view?usp=sharing
+<br>
+Author: cacadosman
 
 ---
 
