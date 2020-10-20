@@ -30,6 +30,8 @@ def docs(name=None):
         'decode',
         'hex',
         'chr',
+        'doc',
+        'eval',
         'popen',
         'system',
         'read',
@@ -45,7 +47,11 @@ def docs(name=None):
         '|',
         '%',
         ',',
-        '-'
+        '-',
+        '&',
+        '>',
+        '`',
+        '$'
     ]
 
     if name:

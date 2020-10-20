@@ -1,6 +1,6 @@
 FROM python:alpine
 
-RUN apk add --update --no-cache g++ gcc libxslt-dev
+RUN apk add --update --no-cache g++ gcc libxslt-dev netcat-openbsd
 COPY app /opt/app
 COPY flag.txt /opt/app/secret_flag
 
