@@ -1,18 +1,17 @@
 FROM python:alpine
 
-RUN apk add --update --no-cache g++ gcc libxslt-dev netcat-openbsd
-COPY app /opt/app
-COPY flag.txt /opt/app/secret_flag
-
-WORKDIR /opt/app
-
-RUN pip install -r requirements.txt
-RUN chown -R root:root /opt/app
-
 ENV USER=ctf
 ENV UID=1337
 ENV GID=1337
 
+WORKDIR /opt/app
+COPY app /opt/app
+COPY flag.txt /opt/app/secret_flag
+
+RUN apk add --update --no-cache g++ gcc libxslt-dev netcat-openbsd
+RUN pip install -r requirements.txt
+RUN chown -R root:root /opt/app
+RUN rm /usr/bin/wget /usr/bin/nc
 RUN addgroup -S ctf
 RUN adduser \
     --disabled-password \
@@ -23,7 +22,7 @@ RUN adduser \
     --uid "$UID" \
     "$USER"
 
-EXPOSE 4444
 USER ctf
+EXPOSE 4444
 
-ENTRYPOINT python /opt/app/main.py
+ENTRYPOINT python main.py
