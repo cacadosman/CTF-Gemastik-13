@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+  agent:
+    build: .
+    ports:
+      - "10103"
+    networks:
+      - pesugihan_network
+    deploy:
+      mode: replicated
+      replicas: 2
+    restart: always
+
+networks:
+  pesugihan_network:
+    driver: overlay
+    attachable: true
