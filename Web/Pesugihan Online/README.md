@@ -25,7 +25,7 @@ Kemudian payload akan diparsing dan akhirnya dapat melakukan `Remote Code Execut
 <br><br>
 
 Lalu, terdapat sebuah filter yang melakukan html escape untuk meningkatkan kesulitan soal, sehingga peserta diharuskan 
-untuk memutar otak untuk dapat membypass filterya.<br>
+untuk memutar otak untuk dapat membypass filterya. **(Sadly, ternyata StringEscapeUtils.escapeHtml3 nya gak nge-encode single quote, jadi pake single quote bsa tembus)**<br>
 
 ## Catatan Deploy Soal
 - Folder deploy soal di server terdapat pada folder `server`
