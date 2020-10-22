@@ -28,7 +28,6 @@ Lalu, terdapat sebuah filter yang melakukan html escape untuk meningkatkan kesul
 untuk memutar otak untuk dapat membypass filterya.<br>
 
 ## Catatan Deploy Soal
-- File `pesugihan-online.zip` diberikan kepada peserta
 - Folder deploy soal di server terdapat pada folder `server`
 - Ubah port yang diinginkan untuk service soal pada file `docker-stack.yml`
 - run `docker build -t pesugihan_online:latest .`
