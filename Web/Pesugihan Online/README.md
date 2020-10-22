@@ -30,9 +30,9 @@ untuk memutar otak untuk dapat membypass filterya.<br>
 ## Catatan Deploy Soal
 - File `pesugihan-online.zip` diberikan kepada peserta
 - Folder deploy soal di server terdapat pada folder `server`
-- Ubah port yang diinginkan untuk service soal pada file `docker-compose.yml`
-- run `docker-compose build`
-- Lalu tinggal `docker-compose up -d`
+- Ubah port yang diinginkan untuk service soal pada file `docker-stack.yml`
+- run `docker build -t pesugihan_online:latest .`
+- Lalu tinggal `docker stack deploy --compose-file=docker-stack.yml pesugihan-online`
 
 ## Catatan Solver
 Solver soal terdapat pada script python2 bernama `payload_generator.py` pada folder `solver` . Tinggal mengganti payloadnya saja sesuai keinginan (misal mau melakukan reverse shell atau terserah intinya RCE).<br>
