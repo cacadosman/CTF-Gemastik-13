@@ -1,0 +1,32 @@
+version: '3.2'
+
+services:
+  web:
+    image: documentations:latest
+    ports:
+      - "8082-8084:4444"
+    networks:
+      - docs_network
+    deploy:
+      mode: replicated
+      replicas: 3
+      resources:
+        reservations:
+          cpus: '0.25'
+          memory: 125M
+        limits:
+          cpus: '0.3'
+          memory: 250M
+      placement:
+        constraints: [node.role == worker]
+      restart_policy:
+        condition: on-failure
+    dns: "0.0.0.0"
+    read_only: true
+    
+networks:
+  docs_network:
+    driver: overlay
+    attachable: true
+
+
