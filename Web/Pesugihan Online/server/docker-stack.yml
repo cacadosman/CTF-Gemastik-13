@@ -1,16 +1,19 @@
-version: '3.2'
+version: '3.2' 
 
 services:
-  agent:
-    build: .
+  web:
+    image: pesugihan_online:latest
     ports:
-      - "10103"
+      - "10001:8080"
     networks:
       - pesugihan_network
     deploy:
+      restart_policy:
+        condition: on-failure
       mode: replicated
       replicas: 2
-    restart: always
+      placement:
+        constraints: [node.role == worker]
 
 networks:
   pesugihan_network:
